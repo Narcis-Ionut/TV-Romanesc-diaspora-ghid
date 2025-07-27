@@ -1,0 +1,2297 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>IPTV Help (RO Diaspora) — Ghiduri Interactive 2025</title>
+    <meta
+      name="description"
+      content="Ghiduri IPTV pentru diaspora: instalare aplicații, trimitere MAC + Cheie prin WhatsApp/Email și pașii de activare."
+    />
+    <meta name="theme-color" content="#0f0f23" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        /* Dark Theme Colors */
+        --bg-primary: #0a0a0f;
+        --bg-secondary: #0f0f23;
+        --bg-tertiary: #1a1a2e;
+        --surface: #16213e;
+        --surface-hover: #1e2749;
+        --glass: rgba(22, 33, 62, 0.25);
+        --glass-hover: rgba(22, 33, 62, 0.4);
+        --text-primary: #ffffff;
+        --text-secondary: #b4b8c9;
+        --text-muted: #777b8c;
+        --accent-primary: #4f46e5;
+        --accent-secondary: #7c3aed;
+        --accent-tertiary: #06b6d4;
+        --success: #10b981;
+        --warning: #f59e0b;
+        --error: #ef4444;
+        --border: rgba(255, 255, 255, 0.1);
+        --border-accent: rgba(79, 70, 229, 0.3);
+        --glow: 0 0 20px rgba(79, 70, 229, 0.3);
+        --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.3);
+        --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.4);
+        --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
+        --gradient-primary: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        --gradient-secondary: linear-gradient(135deg, #06b6d4 0%, #4f46e5 100%);
+        --gradient-bg: radial-gradient(
+          ellipse at top,
+          #0f0f23 0%,
+          #0a0a0f 100%
+        );
+        --noise: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      }
+
+      .light {
+        --bg-primary: #fafafa;
+        --bg-secondary: #ffffff;
+        --bg-tertiary: #f5f5f5;
+        --surface: #ffffff;
+        --surface-hover: #f8fafc;
+        --glass: rgba(255, 255, 255, 0.8);
+        --glass-hover: rgba(255, 255, 255, 0.95);
+        --text-primary: #0f172a;
+        --text-secondary: #475569;
+        --text-muted: #64748b;
+        --border: rgba(0, 0, 0, 0.1);
+        --border-accent: rgba(79, 70, 229, 0.2);
+        --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.1);
+        --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.15);
+        --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.2);
+        --gradient-bg: radial-gradient(
+          ellipse at top,
+          #ffffff 0%,
+          #fafafa 100%
+        );
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+      }
+
+      body {
+        font-family: "Inter", system-ui, -apple-system, sans-serif;
+        font-feature-settings: "liga" 1, "kern" 1;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background: var(--gradient-bg);
+        background-attachment: fixed;
+        color: var(--text-primary);
+        line-height: 1.6;
+        font-size: 16px;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--noise);
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      /* Enhanced Typography */
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -0.025em;
+        color: var(--text-primary);
+      }
+
+      h1 {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+      }
+      h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
+      }
+      h3 {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+      }
+
+      /* Header with Glass Effect */
+      .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        background: var(--glass);
+        border-bottom: 1px solid var(--border);
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      }
+
+      .header-inner {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+      }
+
+      .brand {
+        font-size: 1.5rem;
+        font-weight: 800;
+        background: var(--gradient-primary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .brand::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--gradient-primary);
+        transition: width 0.3s ease;
+      }
+
+      .brand:hover::after {
+        width: 100%;
+      }
+
+      .top-nav {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .nav-item {
+        color: var(--text-secondary);
+        text-decoration: none;
+        padding: 0.75rem 1rem;
+        border-radius: 0.75rem;
+        font-weight: 500;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .nav-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: var(--gradient-primary);
+        opacity: 0.1;
+        transition: left 0.3s ease;
+      }
+
+      .nav-item:hover {
+        color: var(--text-primary);
+        transform: translateY(-2px);
+      }
+
+      .nav-item:hover::before {
+        left: 0;
+      }
+
+      .theme-toggle {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 0.75rem;
+        padding: 0.75rem;
+        color: var(--text-primary);
+        cursor: pointer;
+        font-size: 1.25rem;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .theme-toggle::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: var(--gradient-primary);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s ease;
+        opacity: 0.1;
+      }
+
+      .theme-toggle:hover::before {
+        width: 100px;
+        height: 100px;
+      }
+
+      /* Main Content */
+      .main-content {
+        margin-top: 100px;
+        min-height: calc(100vh - 100px);
+      }
+
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      /* Hero Section */
+      .hero {
+        text-align: center;
+        padding: 6rem 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: conic-gradient(
+          from 0deg,
+          transparent,
+          var(--accent-primary),
+          transparent,
+          var(--accent-secondary),
+          transparent
+        );
+        opacity: 0.1;
+        animation: rotate 20s linear infinite;
+        pointer-events: none;
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero h1 {
+        margin-bottom: 1.5rem;
+        background: var(--gradient-primary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 1.1;
+      }
+
+      .hero-subtitle {
+        font-size: 1.25rem;
+        color: var(--text-secondary);
+        margin-bottom: 3rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 2rem;
+        background: var(--gradient-primary);
+        color: white;
+        text-decoration: none;
+        border-radius: 1rem;
+        font-weight: 600;
+        font-size: 1.125rem;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        box-shadow: var(--shadow-md);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-cta::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.6s ease;
+      }
+
+      .hero-cta:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .hero-cta:hover::before {
+        left: 100%;
+      }
+
+      /* Layout Grid */
+      .layout {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 3rem;
+        margin-bottom: 6rem;
+      }
+
+      @media (max-width: 1024px) {
+        .layout {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+      }
+
+      /* Sidebar */
+      .sidebar {
+        position: sticky;
+        top: 120px;
+        height: fit-content;
+      }
+
+      .toc-card {
+        background: var(--glass);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--border);
+        border-radius: 1.5rem;
+        padding: 2rem;
+        box-shadow: var(--shadow-md);
+        transition: all 0.3s ease;
+      }
+
+      .toc-card:hover {
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-2px);
+      }
+
+      .toc-title {
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        color: var(--text-primary);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .toc-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+
+      .toc-link {
+        color: var(--text-secondary);
+        text-decoration: none;
+        padding: 0.75rem 1rem;
+        border-radius: 0.75rem;
+        transition: all 0.3s ease;
+        position: relative;
+        font-weight: 500;
+        border-left: 2px solid transparent;
+      }
+
+      .toc-link:hover {
+        color: var(--text-primary);
+        background: var(--glass-hover);
+        transform: translateX(4px);
+        border-left-color: var(--accent-primary);
+      }
+
+      .toc-link.active {
+        color: var(--accent-primary);
+        background: var(--glass-hover);
+        border-left-color: var(--accent-primary);
+        font-weight: 600;
+      }
+
+      /* Content Cards */
+      .content-section {
+        background: var(--glass);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--border);
+        border-radius: 1.5rem;
+        padding: 2.5rem;
+        margin-bottom: 2rem;
+        box-shadow: var(--shadow-md);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .content-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: var(--gradient-primary);
+      }
+
+      .content-section:hover {
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-2px);
+      }
+
+      .section-title {
+        margin-bottom: 1.5rem;
+        color: var(--text-primary);
+        position: relative;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background: var(--gradient-primary);
+        border-radius: 1px;
+      }
+
+      /* Interactive Steps */
+      .steps-container {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .step-item {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .step-item:hover {
+        background: var(--surface-hover);
+        box-shadow: var(--shadow-sm);
+        transform: translateX(4px);
+      }
+
+      .step-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        background: var(--gradient-primary);
+        color: white;
+        border-radius: 50%;
+        font-weight: 600;
+        font-size: 0.875rem;
+        margin-right: 1rem;
+        flex-shrink: 0;
+      }
+
+      .step-content {
+        flex: 1;
+      }
+
+      .step-title {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: var(--text-primary);
+      }
+
+      .step-description {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+      }
+
+      /* App Cards Grid */
+      .apps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .app-card {
+        background: var(--glass);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--border);
+        border-radius: 1.5rem;
+        padding: 2rem;
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+      }
+
+      .app-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: var(--gradient-secondary);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      .app-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .app-card:hover::before {
+        transform: scaleX(1);
+      }
+
+      .app-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .app-icon {
+        width: 3rem;
+        height: 3rem;
+        background: var(--gradient-primary);
+        border-radius: 0.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 600;
+        font-size: 1.25rem;
+      }
+
+      .app-name {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--text-primary);
+      }
+
+      .app-compatibility {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+      }
+
+      /* Code Blocks */
+      .code-container {
+        position: relative;
+        margin: 2rem 0;
+      }
+
+      .code-block {
+        background: var(--bg-primary);
+        border: 1px solid var(--border);
+        border-radius: 1rem;
+        overflow: hidden;
+        font-family: "JetBrains Mono", monospace;
+        position: relative;
+      }
+
+      .code-header {
+        background: var(--surface);
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .code-title {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+      }
+
+      .copy-btn {
+        background: var(--accent-primary);
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .copy-btn:hover {
+        background: var(--accent-secondary);
+        transform: scale(1.05);
+      }
+
+      .code-content {
+        padding: 1.5rem;
+        overflow-x: auto;
+      }
+
+      /* Visual Guide Carousel */
+      .carousel-container {
+        margin: 2rem 0;
+        position: relative;
+      }
+
+      .carousel-frame {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 1rem;
+        overflow: hidden;
+        aspect-ratio: 16/9;
+        position: relative;
+      }
+
+      .carousel-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: all 0.3s ease;
+      }
+
+      .carousel-controls {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .carousel-btn {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 1.25rem;
+      }
+
+      .carousel-btn:hover {
+        background: var(--surface-hover);
+        transform: scale(1.1);
+      }
+
+      .carousel-indicators {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      .indicator {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background: var(--text-muted);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .indicator.active {
+        background: var(--accent-primary);
+        transform: scale(1.5);
+      }
+
+      /* Tools Section */
+      .tool-container {
+        background: var(--glass);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--border);
+        border-radius: 1.5rem;
+        padding: 2rem;
+        margin: 2rem 0;
+      }
+
+      .tool-textarea {
+        width: 100%;
+        min-height: 150px;
+        background: var(--bg-primary);
+        border: 1px solid var(--border);
+        border-radius: 0.75rem;
+        padding: 1rem;
+        color: var(--text-primary);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.9rem;
+        resize: vertical;
+        transition: all 0.3s ease;
+      }
+
+      .tool-textarea:focus {
+        outline: none;
+        border-color: var(--accent-primary);
+        box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+      }
+
+      .tool-actions {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .tool-btn {
+        background: var(--gradient-primary);
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.75rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .tool-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .tool-btn.secondary {
+        background: var(--surface);
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+      }
+
+      /* FAQ Accordion */
+      .faq-item {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .faq-question {
+        width: 100%;
+        background: none;
+        border: none;
+        padding: 1.5rem;
+        text-align: left;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.3s ease;
+      }
+
+      .faq-question:hover {
+        background: var(--surface-hover);
+      }
+
+      .faq-answer {
+        padding: 0 1.5rem 1.5rem;
+        color: var(--text-secondary);
+        display: none;
+      }
+
+      .faq-item.active .faq-answer {
+        display: block;
+        animation: fadeIn 0.3s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Footer */
+      .site-footer {
+        background: var(--glass);
+        backdrop-filter: blur(20px);
+        border-top: 1px solid var(--border);
+        padding: 3rem 0;
+        margin-top: 6rem;
+        text-align: center;
+      }
+
+      /* Mobile Responsiveness */
+      @media (max-width: 768px) {
+        .container {
+          padding: 0 1rem;
+        }
+        .header-inner {
+          padding: 1rem;
+        }
+        .top-nav {
+          display: none;
+        }
+        .hero {
+          padding: 3rem 0;
+        }
+        .content-section {
+          padding: 1.5rem;
+        }
+        .apps-grid {
+          grid-template-columns: 1fr;
+        }
+        .layout {
+          gap: 1.5rem;
+        }
+      }
+
+      /* Utility Classes */
+      .text-gradient {
+        background: var(--gradient-primary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .glass-effect {
+        background: var(--glass);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--border);
+      }
+
+      .hover-lift {
+        transition: transform 0.3s ease;
+      }
+
+      .hover-lift:hover {
+        transform: translateY(-4px);
+      }
+
+      /* Animations */
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-slide-up {
+        animation: slideUp 0.6s ease forwards;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: var(--bg-secondary);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: var(--surface);
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--surface-hover);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="#top" class="brand">
+          IPTV Guide <span style="color: var(--text-muted)">2025</span>
+        </a>
+
+        <nav class="top-nav">
+          <a href="#quickstart" class="nav-item">Start Rapid</a>
+          <a href="#apps" class="nav-item">Aplicații</a>
+          <a href="#guide" class="nav-item">Ghid Visual</a>
+          <a href="#tools" class="nav-item">Unelte</a>
+          <a href="#faq" class="nav-item">FAQ</a>
+        </nav>
+
+        <button class="theme-toggle" id="themeToggle" aria-label="Schimbă tema">
+          🌓
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero" id="top">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Conectare IPTV<br />Simplă & Rapidă</h1>
+            <p class="hero-subtitle">
+              Ghid interactiv pentru diaspora românească - instalează, activează
+              și bucură-te de conținutul tău favorit în câteva minute
+            </p>
+            <a href="#quickstart" class="hero-cta">
+              <span>Începe Acum</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <div class="layout">
+          <!-- Sidebar -->
+          <aside class="sidebar">
+            <div class="toc-card">
+              <h2 class="toc-title">
+                <span>📋</span>
+                Cuprins
+              </h2>
+              <nav class="toc-nav" id="tocNav">
+                <a href="#quickstart" class="toc-link">Start Rapid</a>
+                <a href="#apps" class="toc-link">Aplicații Populare</a>
+                <a href="#guide" class="toc-link">Ghid Visual</a>
+                <a href="#activation" class="toc-link">Proces Activare</a>
+                <a href="#troubleshooting" class="toc-link">Depanare</a>
+                <a href="#tools" class="toc-link">Unelte</a>
+                <a href="#faq" class="toc-link">Întrebări</a>
+              </nav>
+            </div>
+          </aside>
+
+          <!-- Content -->
+          <div class="content">
+            <!-- Quick Start Section -->
+            <section class="content-section animate-slide-up" id="quickstart">
+              <h2 class="section-title">🚀 Start Rapid (5 minute)</h2>
+              <p style="color: var(--text-secondary); margin-bottom: 2rem">
+                Urmează acești pași simpli pentru a configura IPTV pe
+                dispozitivul tău
+              </p>
+
+              <div class="steps-container">
+                <div class="step-item">
+                  <div
+                    style="display: flex; align-items: flex-start; gap: 1rem"
+                  >
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                      <div class="step-title">Alege Aplicația</div>
+                      <div class="step-description">
+                        Selectează aplicația compatibilă cu televizorul sau
+                        boxul tău din lista de mai jos
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="step-item">
+                  <div
+                    style="display: flex; align-items: flex-start; gap: 1rem"
+                  >
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                      <div class="step-title">Instalează</div>
+                      <div class="step-description">
+                        Descarcă și instalează aplicația din magazinul oficial
+                        al dispozitivului
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="step-item">
+                  <div
+                    style="display: flex; align-items: flex-start; gap: 1rem"
+                  >
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                      <div class="step-title">Notează Datele</div>
+                      <div class="step-description">
+                        Deschide aplicația și notează <strong>MAC</strong> și
+                        <strong>Cheia de activare</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="step-item">
+                  <div
+                    style="display: flex; align-items: flex-start; gap: 1rem"
+                  >
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                      <div class="step-title">Trimite pentru Activare</div>
+                      <div class="step-description">
+                        Trimite datele prin WhatsApp sau Email pentru activare
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="step-item">
+                  <div
+                    style="display: flex; align-items: flex-start; gap: 1rem"
+                  >
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                      <div class="step-title">Bucură-te de Conținut</div>
+                      <div class="step-description">
+                        După confirmare, redeschide aplicația și bucură-te de
+                        canale
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="code-container">
+                <div class="code-block">
+                  <div class="code-header">
+                    <span class="code-title"
+                      >📝 Model Mesaj pentru Activare</span
+                    >
+                    <button
+                      class="copy-btn"
+                      onclick="copyToClipboard('sample-message')"
+                    >
+                      Copiază
+                    </button>
+                  </div>
+                  <div class="code-content">
+                    <pre id="sample-message">
+Dispozitiv: [LG/Samsung/Android Box/Fire TV]
+Aplicație: [IboPlayer/BobPlayer/Smart IPTV/SET IPTV]
+MAC: [AA:BB:CC:DD:EE:FF]
+Cheie/Cod: [dacă aplicația afișează]
+Nume: [opțional]
+Observații: [opțional]</pre
+                    >
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Apps Section -->
+            <section class="content-section animate-slide-up" id="apps">
+              <h2 class="section-title">📱 Aplicații Populare</h2>
+              <p style="color: var(--text-secondary); margin-bottom: 2rem">
+                Alege aplicația potrivită pentru dispozitivul tău
+              </p>
+
+              <div class="apps-grid">
+                <div
+                  class="app-card hover-lift"
+                  onclick="toggleAppDetails('ibo')"
+                >
+                  <div class="app-header">
+                    <div class="app-icon">IBO</div>
+                    <div>
+                      <div class="app-name">IboPlayer</div>
+                      <div class="app-compatibility">Android TV, Fire TV</div>
+                    </div>
+                  </div>
+                  <p style="color: var(--text-secondary)">
+                    Una dintre cele mai populare aplicații IPTV cu interfață
+                    prietenoasă și performanțe excelente.
+                  </p>
+                  <div
+                    id="ibo-details"
+                    class="app-details"
+                    style="
+                      display: none;
+                      margin-top: 1rem;
+                      padding-top: 1rem;
+                      border-top: 1px solid var(--border);
+                    "
+                  >
+                    <h4 style="margin-bottom: 0.5rem">Pași de instalare:</h4>
+                    <ol
+                      style="padding-left: 1.5rem; color: var(--text-secondary)"
+                    >
+                      <li>Deschide Google Play Store sau Amazon Appstore</li>
+                      <li>Caută "IboPlayer" și instalează</li>
+                      <li>Pornește aplicația - vei vedea MAC și Device Key</li>
+                      <li>Trimite datele pentru activare</li>
+                      <li>După confirmare, redeschide aplicația</li>
+                    </ol>
+                  </div>
+                </div>
+
+                <div
+                  class="app-card hover-lift"
+                  onclick="toggleAppDetails('bob')"
+                >
+                  <div class="app-header">
+                    <div class="app-icon">BOB</div>
+                    <div>
+                      <div class="app-name">BobPlayer</div>
+                      <div class="app-compatibility">Android TV, Fire TV</div>
+                    </div>
+                  </div>
+                  <p style="color: var(--text-secondary)">
+                    Aplicație robustă cu opțiuni avansate de filtrare și
+                    organizare a canalelor.
+                  </p>
+                  <div
+                    id="bob-details"
+                    class="app-details"
+                    style="
+                      display: none;
+                      margin-top: 1rem;
+                      padding-top: 1rem;
+                      border-top: 1px solid var(--border);
+                    "
+                  >
+                    <h4 style="margin-bottom: 0.5rem">Pași de instalare:</h4>
+                    <ol
+                      style="padding-left: 1.5rem; color: var(--text-secondary)"
+                    >
+                      <li>Instalează BobPlayer din magazin</li>
+                      <li>La deschidere, notează MAC și Activation Code</li>
+                      <li>Trimite datele pentru activare</li>
+                      <li>Folosește "Reload" după activare</li>
+                    </ol>
+                  </div>
+                </div>
+
+                <div
+                  class="app-card hover-lift"
+                  onclick="toggleAppDetails('smart')"
+                >
+                  <div class="app-header">
+                    <div class="app-icon">📺</div>
+                    <div>
+                      <div class="app-name">Smart IPTV</div>
+                      <div class="app-compatibility">
+                        LG webOS, Samsung Tizen
+                      </div>
+                    </div>
+                  </div>
+                  <p style="color: var(--text-secondary)">
+                    Aplicația standard pentru televizoarele smart LG și Samsung
+                    cu interfață simplă.
+                  </p>
+                  <div
+                    id="smart-details"
+                    class="app-details"
+                    style="
+                      display: none;
+                      margin-top: 1rem;
+                      padding-top: 1rem;
+                      border-top: 1px solid var(--border);
+                    "
+                  >
+                    <h4 style="margin-bottom: 0.5rem">Pași de instalare:</h4>
+                    <ol
+                      style="padding-left: 1.5rem; color: var(--text-secondary)"
+                    >
+                      <li>Deschide LG Content Store sau Samsung Apps</li>
+                      <li>Caută și instalează "Smart IPTV"</li>
+                      <li>La prima deschidere, notează MAC-ul afișat</li>
+                      <li>Trimite MAC-ul pentru activare</li>
+                      <li>Redeschide aplicația după confirmare</li>
+                    </ol>
+                  </div>
+                </div>
+
+                <div
+                  class="app-card hover-lift"
+                  onclick="toggleAppDetails('set')"
+                >
+                  <div class="app-header">
+                    <div class="app-icon">SET</div>
+                    <div>
+                      <div class="app-name">SET IPTV</div>
+                      <div class="app-compatibility">Samsung Tizen</div>
+                    </div>
+                  </div>
+                  <p style="color: var(--text-secondary)">
+                    Alternativă populară pentru televizoarele Samsung cu funcții
+                    avansate EPG.
+                  </p>
+                  <div
+                    id="set-details"
+                    class="app-details"
+                    style="
+                      display: none;
+                      margin-top: 1rem;
+                      padding-top: 1rem;
+                      border-top: 1px solid var(--border);
+                    "
+                  >
+                    <h4 style="margin-bottom: 0.5rem">Pași de instalare:</h4>
+                    <ol
+                      style="padding-left: 1.5rem; color: var(--text-secondary)"
+                    >
+                      <li>Instalează SET IPTV din Samsung Apps</li>
+                      <li>Notează MAC și codul afișat</li>
+                      <li>Completează formularul de activare online</li>
+                      <li>Sau trimite datele prin WhatsApp/Email</li>
+                    </ol>
+                  </div>
+                </div>
+
+                <div
+                  class="app-card hover-lift"
+                  onclick="toggleAppDetails('stb')"
+                >
+                  <div class="app-header">
+                    <div class="app-icon">STB</div>
+                    <div>
+                      <div class="app-name">STBEmu</div>
+                      <div class="app-compatibility">Android, Fire TV</div>
+                    </div>
+                  </div>
+                  <p style="color: var(--text-secondary)">
+                    Emulator STB pentru boxurile Android cu interfață similară
+                    decoderelor clasice.
+                  </p>
+                  <div
+                    id="stb-details"
+                    class="app-details"
+                    style="
+                      display: none;
+                      margin-top: 1rem;
+                      padding-top: 1rem;
+                      border-top: 1px solid var(--border);
+                    "
+                  >
+                    <h4 style="margin-bottom: 0.5rem">Pași de instalare:</h4>
+                    <ol
+                      style="padding-left: 1.5rem; color: var(--text-secondary)"
+                    >
+                      <li>Instalează STBEmu din Google Play</li>
+                      <li>Configurează MAC-ul emulat</li>
+                      <li>Trimite MAC-ul pentru activare</li>
+                      <li>Configurează server-ul în setări</li>
+                    </ol>
+                  </div>
+                </div>
+
+                <div
+                  class="app-card hover-lift"
+                  onclick="toggleAppDetails('tivimate')"
+                >
+                  <div class="app-header">
+                    <div class="app-icon">📡</div>
+                    <div>
+                      <div class="app-name">TiviMate</div>
+                      <div class="app-compatibility">Android TV</div>
+                    </div>
+                  </div>
+                  <p style="color: var(--text-secondary)">
+                    Player IPTV premium cu EPG avansat și interfață modernă
+                    pentru pasionați.
+                  </p>
+                  <div
+                    id="tivimate-details"
+                    class="app-details"
+                    style="
+                      display: none;
+                      margin-top: 1rem;
+                      padding-top: 1rem;
+                      border-top: 1px solid var(--border);
+                    "
+                  >
+                    <h4 style="margin-bottom: 0.5rem">Pași de configurare:</h4>
+                    <ol
+                      style="padding-left: 1.5rem; color: var(--text-secondary)"
+                    >
+                      <li>Instalează TiviMate din Google Play</li>
+                      <li>Solicită link-ul M3U pentru playlist</li>
+                      <li>Adaugă playlist-ul în aplicație</li>
+                      <li>Configurează EPG dacă este disponibil</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Visual Guide -->
+            <section class="content-section animate-slide-up" id="guide">
+              <h2 class="section-title">🎯 Ghid Visual Interactiv</h2>
+              <p style="color: var(--text-secondary); margin-bottom: 2rem">
+                Urmărește pașii vizuali pentru o configurare perfectă
+              </p>
+
+              <div class="carousel-container">
+                <div class="carousel-frame">
+                  <img
+                    id="carouselImage"
+                    class="carousel-image"
+                    src="images/ghid-vizual/101.png"
+                    alt="Pasul 1"
+                    onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjMTYyMTNlIi8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYjRiOGM5IiBmb250LWZhbWlseT0iSW50ZXIiIGZvbnQtc2l6ZT0iMTYiPkltYWdpbmUgaW5kaXNwb25pYmlsxINcXG4gPEMFpKNCeP0fGFtcGVzIGRlIGNhcHR1cmkgZGUgZWNyYW48L3RleHQ+Cjwvc3ZnPgo='"
+                  />
+                </div>
+
+                <div class="carousel-controls">
+                  <button
+                    class="carousel-btn"
+                    id="prevSlide"
+                    onclick="changeSlide(-1)"
+                  >
+                    ◀
+                  </button>
+                  <button
+                    class="carousel-btn"
+                    id="nextSlide"
+                    onclick="changeSlide(1)"
+                  >
+                    ▶
+                  </button>
+                </div>
+
+                <div class="carousel-indicators" id="indicators">
+                  <!-- Generated by JavaScript -->
+                </div>
+
+                <div
+                  style="
+                    text-align: center;
+                    margin-top: 1rem;
+                    color: var(--text-secondary);
+                  "
+                  id="slideCaption"
+                >
+                  Pasul 1 din 10 - Deschide aplicația
+                </div>
+              </div>
+            </section>
+
+            <!-- Activation Process -->
+            <section class="content-section animate-slide-up" id="activation">
+              <h2 class="section-title">⚡ Proces de Activare</h2>
+              <p style="color: var(--text-secondary); margin-bottom: 2rem">
+                Informații detaliate despre procesul de activare MAC + Cheie
+              </p>
+
+              <div
+                style="
+                  display: grid;
+                  gap: 2rem;
+                  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                "
+              >
+                <div
+                  class="glass-effect"
+                  style="padding: 2rem; border-radius: 1rem"
+                >
+                  <h3 style="margin-bottom: 1rem; color: var(--success)">
+                    ✅ Ce trebuie să faci
+                  </h3>
+                  <ul style="color: var(--text-secondary); line-height: 1.8">
+                    <li>
+                      Notează MAC-ul exact așa cum apare (XX:XX:XX:XX:XX:XX)
+                    </li>
+                    <li>Copiază Cheia/Codul dacă este afișată</li>
+                    <li>Specifică modelul dispozitivului</li>
+                    <li>Menționează aplicația folosită</li>
+                    <li>Așteaptă confirmarea înainte de redeschidere</li>
+                  </ul>
+                </div>
+
+                <div
+                  class="glass-effect"
+                  style="padding: 2rem; border-radius: 1rem"
+                >
+                  <h3 style="margin-bottom: 1rem; color: var(--warning)">
+                    ⚠️ Erori comune
+                  </h3>
+                  <ul style="color: var(--text-secondary); line-height: 1.8">
+                    <li>MAC scris incorect (0 în loc de O)</li>
+                    <li>Cheia copiată cu spații suplimentare</li>
+                    <li>Redeschiderea aplicației înainte de confirmare</li>
+                    <li>Confundarea între diferite aplicații</li>
+                    <li>Folosirea unui MAC vechi/expirat</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="code-container">
+                <div class="code-block">
+                  <div class="code-header">
+                    <span class="code-title">📧 Șablon Mesaj de Activare</span>
+                    <button
+                      class="copy-btn"
+                      onclick="copyToClipboard('activation-template')"
+                    >
+                      Copiază
+                    </button>
+                  </div>
+                  <div class="code-content">
+                    <pre id="activation-template">
+Subiect: Activare IPTV - [Numele tău]
+
+MAC: AA:BB:CC:DD:EE:FF
+Cheie/Cod: 1234-ABCD-5678 (dacă există)
+Aplicație: IboPlayer (sau BobPlayer/Smart IPTV/SET IPTV)
+Dispozitiv: LG C2 webOS / Samsung / Android Box / Fire TV
+Model: [Modelul exact al TV-ului/boxului]
+
+Observații: [Orice informații suplimentare]</pre
+                    >
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Troubleshooting -->
+            <section
+              class="content-section animate-slide-up"
+              id="troubleshooting"
+            >
+              <h2 class="section-title">🔧 Depanare Rapidă</h2>
+              <p style="color: var(--text-secondary); margin-bottom: 2rem">
+                Soluții pentru problemele întâlnite frecvent
+              </p>
+
+              <div style="display: grid; gap: 1.5rem">
+                <div
+                  class="glass-effect hover-lift"
+                  style="padding: 1.5rem; border-radius: 1rem"
+                >
+                  <h3 style="margin-bottom: 1rem; color: var(--error)">
+                    🚫 Nu se activează aplicația
+                  </h3>
+                  <div style="color: var(--text-secondary)">
+                    <p><strong>Cauze posibile:</strong></p>
+                    <ul style="margin: 0.5rem 0; padding-left: 1.5rem">
+                      <li>MAC incorect sau modificat</li>
+                      <li>Aplicația nu a fost închisă complet</li>
+                      <li>Probleme de conectivitate</li>
+                    </ul>
+                    <p><strong>Soluții:</strong></p>
+                    <ul style="margin: 0.5rem 0; padding-left: 1.5rem">
+                      <li>Verifică din nou MAC-ul caracter cu caracter</li>
+                      <li>
+                        Închide aplicația din "Aplicații recente" și redeschide
+                      </li>
+                      <li>Repornește televizorul/boxul</li>
+                      <li>Verifică conexiunea la internet</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div
+                  class="glass-effect hover-lift"
+                  style="padding: 1.5rem; border-radius: 1rem"
+                >
+                  <h3 style="margin-bottom: 1rem; color: var(--warning)">
+                    📺 Lista de canale goală
+                  </h3>
+                  <div style="color: var(--text-secondary)">
+                    <p><strong>Cauze posibile:</strong></p>
+                    <ul style="margin: 0.5rem 0; padding-left: 1.5rem">
+                      <li>Activarea nu s-a completat</li>
+                      <li>Aplicația necesită actualizare</li>
+                      <li>Cache corupt</li>
+                    </ul>
+                    <p><strong>Soluții:</strong></p>
+                    <ul style="margin: 0.5rem 0; padding-left: 1.5rem">
+                      <li>Așteaptă 5-10 minute după activare</li>
+                      <li>Actualizează aplicația la ultima versiune</li>
+                      <li>Șterge cache-ul aplicației</li>
+                      <li>Folosește opțiunea "Reload/Refresh" din aplicație</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div
+                  class="glass-effect hover-lift"
+                  style="padding: 1.5rem; border-radius: 1rem"
+                >
+                  <h3
+                    style="margin-bottom: 1rem; color: var(--accent-tertiary)"
+                  >
+                    ⚡ Probleme de redare
+                  </h3>
+                  <div style="color: var(--text-secondary)">
+                    <p><strong>Cauze posibile:</strong></p>
+                    <ul style="margin: 0.5rem 0; padding-left: 1.5rem">
+                      <li>Conexiune internet lentă</li>
+                      <li>Setări inadecvate de buffer</li>
+                      <li>Probleme cu codecul video</li>
+                    </ul>
+                    <p><strong>Soluții:</strong></p>
+                    <ul style="margin: 0.5rem 0; padding-left: 1.5rem">
+                      <li>Testează viteza internetului (min 10 Mbps)</li>
+                      <li>Comută de la Wi-Fi la cablu Ethernet</li>
+                      <li>Ajustează setările de buffer în aplicație</li>
+                      <li>Schimbă player-ul intern/extern în setări</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Tools -->
+            <section class="content-section animate-slide-up" id="tools">
+              <h2 class="section-title">🛠️ Unelte Utile</h2>
+              <p style="color: var(--text-secondary); margin-bottom: 2rem">
+                Instrumente pentru validarea și testarea listelor IPTV
+              </p>
+
+              <div class="tool-container">
+                <h3 style="margin-bottom: 1rem">📝 Validator M3U</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem">
+                  Verifică dacă lista ta M3U este corect formatată
+                </p>
+
+                <textarea
+                  id="m3uInput"
+                  class="tool-textarea"
+                  placeholder="#EXTM3U&#10;#EXTINF:-1,Canal Test&#10;http://example.com/stream.m3u8&#10;&#10;#EXTINF:-1,Alt Canal&#10;http://example.com/stream2.m3u8"
+                ></textarea>
+
+                <div class="tool-actions">
+                  <button class="tool-btn" onclick="validateM3U()">
+                    Validează Lista
+                  </button>
+                  <button class="tool-btn secondary" onclick="clearM3U()">
+                    Golește
+                  </button>
+                  <button class="tool-btn secondary" onclick="loadSample()">
+                    Încarcă Exemplu
+                  </button>
+                </div>
+
+                <div id="validationResults" style="margin-top: 1rem"></div>
+              </div>
+
+              <div class="tool-container">
+                <h3 style="margin-bottom: 1rem">🔍 Generator MAC</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem">
+                  Generează un MAC address pentru testare (doar pentru aplicații
+                  compatibile)
+                </p>
+
+                <div
+                  style="
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                    flex-wrap: wrap;
+                  "
+                >
+                  <button class="tool-btn" onclick="generateMAC()">
+                    Generează MAC
+                  </button>
+                  <input
+                    type="text"
+                    id="generatedMAC"
+                    readonly
+                    style="
+                      flex: 1;
+                      min-width: 200px;
+                      padding: 0.75rem;
+                      background: var(--surface);
+                      border: 1px solid var(--border);
+                      border-radius: 0.5rem;
+                      color: var(--text-primary);
+                    "
+                    placeholder="MAC generat va apărea aici"
+                  />
+                  <button class="tool-btn secondary" onclick="copyMAC()">
+                    Copiază
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <!-- FAQ -->
+            <section class="content-section animate-slide-up" id="faq">
+              <h2 class="section-title">❓ Întrebări Frecvente</h2>
+              <p style="color: var(--text-secondary); margin-bottom: 2rem">
+                Răspunsuri la cele mai comune întrebări despre IPTV
+              </p>
+
+              <div style="display: grid; gap: 1rem">
+                <div class="faq-item">
+                  <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Unde găsesc MAC-ul și Cheia în aplicație?</span>
+                    <span>+</span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>
+                      MAC-ul și Cheia apar pe primul ecran al aplicației,
+                      imediat după instalare și pornire. În IboPlayer și
+                      BobPlayer, acestea sunt afișate clar în partea centrală
+                      sau de sus a ecranului. Pentru Smart IPTV și SET IPTV,
+                      MAC-ul apare pe pagina principală, iar codul poate fi
+                      generat automat.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Cât durează procesul de activare?</span>
+                    <span>+</span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>
+                      De obicei, activarea durează între 5-30 de minute, în
+                      funcție de volumul de cereri. În weekend-uri sau orele de
+                      vârf poate dura puțin mai mult. Vei primi o confirmare
+                      când activarea este completă.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span
+                      >Pot folosi aceeași activare pe mai multe
+                      dispozitive?</span
+                    >
+                    <span>+</span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>
+                      Nu, fiecare dispozitiv are propriul MAC address unic.
+                      Pentru a folosi IPTV pe un alt dispozitiv, va trebui să
+                      trimiți MAC-ul noului dispozitiv pentru o activare
+                      separată. Unele abonamente permit multiple dispozitive.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Ce fac dacă MAC-ul se schimbă?</span>
+                    <span>+</span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>
+                      MAC-ul hardware nu se schimbă în mod normal. Dacă
+                      aplicația afișează un MAC diferit după o reinstalare, este
+                      posibil să fie generat aleatoriu. Încearcă să reinstalezi
+                      aplicația sau să resetezi setările la valorile din
+                      fabrică.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>De ce nu văd toate canalele românești?</span>
+                    <span>+</span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>
+                      Canalele disponibile depind de pachetul IPTV la care ești
+                      abonat. Unele canale pot fi restricționate geografic sau
+                      pot avea probleme temporare. Verifică dacă toate
+                      categoriile sunt activate în aplicație sau contactează
+                      furnizorul pentru detalii despre pachetul tău.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Aplicația se închide singură sau îngheață</span>
+                    <span>+</span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>
+                      Acest lucru poate fi cauzat de memorie insuficientă,
+                      aplicații care rulează în fundal, sau versiune veche a
+                      aplicației. Închide alte aplicații, repornește
+                      dispozitivul, actualizează aplicația la ultima versiune și
+                      verifică dacă ai suficient spațiu de stocare disponibil.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Cum optimizez calitatea video?</span>
+                    <span>+</span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>
+                      Pentru cea mai bună calitate: folosește conexiune Ethernet
+                      în loc de Wi-Fi, setează buffer-ul pe "High" în aplicație,
+                      închide alte aplicații care consumă internet, și verifică
+                      că viteza internetului este de cel puțin 15-20 Mbps pentru
+                      HD și 25+ Mbps pentru 4K.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Resources -->
+            <section class="content-section animate-slide-up">
+              <h2 class="section-title">📚 Resurse Utile</h2>
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                  gap: 2rem;
+                  margin-top: 2rem;
+                "
+              >
+                <div
+                  class="glass-effect hover-lift"
+                  style="padding: 2rem; border-radius: 1rem; text-align: center"
+                >
+                  <div style="font-size: 3rem; margin-bottom: 1rem">📖</div>
+                  <h3 style="margin-bottom: 1rem">Ghiduri Detaliate</h3>
+                  <p
+                    style="color: var(--text-secondary); margin-bottom: 1.5rem"
+                  >
+                    Ghiduri pas cu pas pentru mai multe aplicații și
+                    dispozitive. Vezi cum să configurezi corect IPTV pe orice
+                    dispozitiv sau aplicație.
+                  </p>
+                  <a
+                    href="https://roconnection.uk/blog/"
+                    class="hero-cta"
+                    style="
+                      display: inline-flex;
+                      padding: 0.75rem 1.5rem;
+                      font-size: 1rem;
+                    "
+                  >
+                    Vezi Ghidurile
+                  </a>
+                </div>
+
+                <div
+                  class="glass-effect hover-lift"
+                  style="padding: 2rem; border-radius: 1rem; text-align: center"
+                >
+                  <div style="font-size: 3rem; margin-bottom: 1rem">💬</div>
+                  <h3 style="margin-bottom: 1rem">Viziteaza siteul nostru</h3>
+                  <p
+                    style="color: var(--text-secondary); margin-bottom: 1.5rem"
+                  >
+                    Alătură-te noua si citeste alte informații utile despre
+                    IPTV!
+                  </p>
+                  <a
+                    href="https://roconnection.uk"
+                    class="hero-cta"
+                    style="
+                      display: inline-flex;
+                      padding: 0.75rem 1.5rem;
+                      font-size: 1rem;
+                    "
+                  >
+                    Click
+                  </a>
+                </div>
+
+                <div
+                  class="glass-effect hover-lift"
+                  style="padding: 2rem; border-radius: 1rem; text-align: center"
+                >
+                  <div style="font-size: 3rem; margin-bottom: 1rem">🔧</div>
+                  <h3 style="margin-bottom: 1rem">Suport Tehnic</h3>
+                  <p
+                    style="color: var(--text-secondary); margin-bottom: 1.5rem"
+                  >
+                    Contactează echipa de suport pentru probleme tehnice
+                    complexe
+                  </p>
+                  <a
+                    href="https://roconnection.uk/#contact"
+                    class="hero-cta"
+                    style="
+                      display: inline-flex;
+                      padding: 0.75rem 1.5rem;
+                      font-size: 1rem;
+                    "
+                  >
+                    Contactează
+                  </a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div style="text-align: center">
+          <p style="color: var(--text-muted); margin-bottom: 1rem">
+            © <span id="currentYear"></span> IPTV Guide 2025 - Ghid informativ
+            pentru diaspora românească
+          </p>
+          <p style="color: var(--text-muted); font-size: 0.9rem">
+            Dezvoltat cu ❤️ pentru comunitatea română din străinătate
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Theme Management
+      const themeToggle = document.getElementById("themeToggle");
+      const savedTheme = localStorage.getItem("theme") || "dark";
+
+      if (savedTheme === "light") {
+        document.documentElement.classList.add("light");
+      }
+
+      themeToggle.addEventListener("click", () => {
+        const isLight = document.documentElement.classList.contains("light");
+        if (isLight) {
+          document.documentElement.classList.remove("light");
+          localStorage.setItem("theme", "dark");
+        } else {
+          document.documentElement.classList.add("light");
+          localStorage.setItem("theme", "light");
+        }
+      });
+
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Table of Contents active state
+      const sections = document.querySelectorAll(".content-section");
+      const tocLinks = document.querySelectorAll(".toc-link");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const id = entry.target.id;
+              tocLinks.forEach((link) => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === `#${id}`) {
+                  link.classList.add("active");
+                }
+              });
+            }
+          });
+        },
+        { rootMargin: "-100px 0px -70% 0px" }
+      );
+
+      sections.forEach((section) => observer.observe(section));
+
+      // App cards toggle details
+      function toggleAppDetails(appId) {
+        const details = document.getElementById(`${appId}-details`);
+        const isVisible = details.style.display !== "none";
+
+        // Hide all other details
+        document.querySelectorAll(".app-details").forEach((detail) => {
+          detail.style.display = "none";
+        });
+
+        // Toggle current detail
+        if (!isVisible) {
+          details.style.display = "block";
+          details.style.animation = "fadeIn 0.3s ease";
+        }
+      }
+
+      // Carousel functionality
+      let currentSlide = 1;
+      const totalSlides = 10;
+      const slideBasePath = "images/ghid-vizual/";
+      const slidePrefix = "";
+      const slideExtension = "png";
+      const slideStartNumber = 101;
+
+      function updateCarousel() {
+        const image = document.getElementById("carouselImage");
+        const caption = document.getElementById("slideCaption");
+        const indicators = document.getElementById("indicators");
+
+        // Update image
+        const slideNumber = slideStartNumber + (currentSlide - 1);
+        image.src = `${slideBasePath}${slidePrefix}${slideNumber}.${slideExtension}`;
+        image.alt = `Pasul ${currentSlide}`;
+
+        // Update caption
+        caption.textContent = `Pasul ${currentSlide} din ${totalSlides} - ${getSlideTitle(
+          currentSlide
+        )}`;
+
+        // Update indicators
+        indicators.innerHTML = "";
+        for (let i = 1; i <= totalSlides; i++) {
+          const indicator = document.createElement("div");
+          indicator.className = `indicator ${
+            i === currentSlide ? "active" : ""
+          }`;
+          indicator.onclick = () => goToSlide(i);
+          indicators.appendChild(indicator);
+        }
+      }
+
+      function getSlideTitle(slide) {
+        const titles = [
+          "Deschide aplicația",
+          "Identifică MAC-ul",
+          "Notează cheia de activare",
+          "Pregătește mesajul",
+          "Trimite pentru activare",
+          "Așteaptă confirmarea",
+          "Închide aplicația",
+          "Redeschide aplicația",
+          "Verifică lista de canale",
+          "Bucură-te de conținut",
+        ];
+        return titles[slide - 1] || `Pasul ${slide}`;
+      }
+
+      function changeSlide(direction) {
+        currentSlide += direction;
+        if (currentSlide > totalSlides) currentSlide = 1;
+        if (currentSlide < 1) currentSlide = totalSlides;
+        updateCarousel();
+      }
+
+      function goToSlide(slide) {
+        currentSlide = slide;
+        updateCarousel();
+      }
+
+      // Initialize carousel
+      updateCarousel();
+
+      // Keyboard navigation for carousel
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") changeSlide(-1);
+        if (e.key === "ArrowRight") changeSlide(1);
+      });
+
+      // Copy to clipboard functionality
+      async function copyToClipboard(elementId) {
+        const element = document.getElementById(elementId);
+        const text = element.textContent;
+
+        try {
+          await navigator.clipboard.writeText(text);
+
+          // Find the copy button and show feedback
+          const copyBtn = document.querySelector(
+            `[onclick="copyToClipboard('${elementId}')"]`
+          );
+          if (copyBtn) {
+            const originalText = copyBtn.textContent;
+            copyBtn.textContent = "Copiat! ✓";
+            copyBtn.style.background = "var(--success)";
+
+            setTimeout(() => {
+              copyBtn.textContent = originalText;
+              copyBtn.style.background = "";
+            }, 2000);
+          }
+        } catch (err) {
+          console.error("Failed to copy text: ", err);
+        }
+      }
+
+      // M3U Validator
+      function validateM3U() {
+        const input = document.getElementById("m3uInput");
+        const results = document.getElementById("validationResults");
+        const content = input.value.trim();
+
+        if (!content) {
+          results.innerHTML =
+            '<div style="color: var(--warning); padding: 1rem; background: var(--surface); border-radius: 0.5rem;">Nu există conținut de validat.</div>';
+          return;
+        }
+
+        const lines = content.split("\n").map((line) => line.trim());
+        let errors = [];
+        let warnings = [];
+        let channelCount = 0;
+
+        // Check header
+        if (!lines[0] || lines[0].toUpperCase() !== "#EXTM3U") {
+          errors.push("Lipsește header-ul #EXTM3U sau nu este pe prima linie");
+        }
+
+        // Validate EXTINF entries
+        for (let i = 0; i < lines.length; i++) {
+          const line = lines[i];
+
+          if (line.startsWith("#EXTINF:")) {
+            const nextLine = lines[i + 1];
+            if (!nextLine) {
+              errors.push(`Linia ${i + 1}: #EXTINF fără URL următor`);
+            } else if (!/^https?:\/\//i.test(nextLine)) {
+              errors.push(`Linia ${i + 2}: URL invalid după #EXTINF`);
+            } else {
+              channelCount++;
+            }
+          }
+
+          if (/^https?:\/\//i.test(line)) {
+            try {
+              new URL(line);
+            } catch {
+              warnings.push(
+                `Linia ${i + 1}: URL posibil invalid - ${line.substring(
+                  0,
+                  50
+                )}...`
+              );
+            }
+          }
+        }
+
+        // Display results
+        let html = `<div style="color: var(--success); padding: 1rem; background: var(--surface); border-radius: 0.5rem; margin-bottom: 1rem;">
+                <strong>✅ Validare completă:</strong><br>
+                Găsite ${channelCount} canale în listă
+            </div>`;
+
+        if (errors.length > 0) {
+          html += `<div style="color: var(--error); padding: 1rem; background: var(--surface); border-radius: 0.5rem; margin-bottom: 1rem;">
+                    <strong>❌ Erori găsite:</strong><br>
+                    ${errors.map((error) => `• ${error}`).join("<br>")}
+                </div>`;
+        }
+
+        if (warnings.length > 0) {
+          html += `<div style="color: var(--warning); padding: 1rem; background: var(--surface); border-radius: 0.5rem;">
+                    <strong>⚠️ Avertismente:</strong><br>
+                    ${warnings.map((warning) => `• ${warning}`).join("<br>")}
+                </div>`;
+        }
+
+        if (errors.length === 0 && warnings.length === 0) {
+          html += `<div style="color: var(--success); padding: 1rem; background: var(--surface); border-radius: 0.5rem;">
+                    <strong>🎉 Perfect!</strong> Lista M3U pare să fie corect formatată.
+                </div>`;
+        }
+
+        results.innerHTML = html;
+      }
+
+      function clearM3U() {
+        document.getElementById("m3uInput").value = "";
+        document.getElementById("validationResults").innerHTML = "";
+      }
+
+      function loadSample() {
+        const sample = `#EXTM3U
+#EXTINF:-1 tvg-id="protv" tvg-name="Pro TV" tvg-logo="https://example.com/logo.png" group-title="România",Pro TV
+http://example.com/protv.m3u8
+#EXTINF:-1 tvg-id="antena1" tvg-name="Antena 1" tvg-logo="https://example.com/logo2.png" group-title="România",Antena 1
+http://example.com/antena1.m3u8
+#EXTINF:-1 tvg-id="kanal-d" tvg-name="Kanal D" tvg-logo="https://example.com/logo3.png" group-title="România",Kanal D
+http://example.com/kanald.m3u8`;
+
+        document.getElementById("m3uInput").value = sample;
+      }
+
+      // MAC Generator
+      function generateMAC() {
+        const hexChars = "0123456789ABCDEF";
+        let mac = "";
+
+        for (let i = 0; i < 6; i++) {
+          if (i > 0) mac += ":";
+          mac += hexChars[Math.floor(Math.random() * 16)];
+          mac += hexChars[Math.floor(Math.random() * 16)];
+        }
+
+        document.getElementById("generatedMAC").value = mac;
+      }
+
+      async function copyMAC() {
+        const macInput = document.getElementById("generatedMAC");
+        if (macInput.value) {
+          try {
+            await navigator.clipboard.writeText(macInput.value);
+            const btn = event.target;
+            const originalText = btn.textContent;
+            btn.textContent = "Copiat!";
+            btn.style.background = "var(--success)";
+
+            setTimeout(() => {
+              btn.textContent = originalText;
+              btn.style.background = "";
+            }, 2000);
+          } catch (err) {
+            console.error("Failed to copy MAC: ", err);
+          }
+        }
+      }
+
+      // FAQ Toggle
+      function toggleFAQ(button) {
+        const faqItem = button.parentElement;
+        const answer = faqItem.querySelector(".faq-answer");
+        const icon = button.querySelector("span:last-child");
+
+        // Close all other FAQ items
+        document.querySelectorAll(".faq-item").forEach((item) => {
+          if (item !== faqItem) {
+            item.classList.remove("active");
+            item.querySelector("span:last-child").textContent = "+";
+          }
+        });
+
+        // Toggle current item
+        faqItem.classList.toggle("active");
+        icon.textContent = faqItem.classList.contains("active") ? "−" : "+";
+      }
+
+      // Set current year
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+
+      // Animate elements on scroll
+      const animateOnScroll = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.animation = "slideUp 0.6s ease forwards";
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      document.querySelectorAll(".animate-slide-up").forEach((el) => {
+        animateOnScroll.observe(el);
+      });
+
+      // Loading animation for images
+      document.querySelectorAll("img").forEach((img) => {
+        img.addEventListener("load", function () {
+          this.style.opacity = "1";
+        });
+      });
+
+      // Mobile menu toggle (if needed)
+      function toggleMobileMenu() {
+        const nav = document.querySelector(".top-nav");
+        nav.classList.toggle("active");
+      }
+
+      // Add mobile styles for navigation
+      if (window.innerWidth <= 768) {
+        const style = document.createElement("style");
+        style.textContent = `
+                .top-nav {
+                    position: fixed;
+                    top: 100px;
+                    left: -100%;
+                    width: 100%;
+                    height: calc(100vh - 100px);
+                    background: var(--glass);
+                    backdrop-filter: blur(20px);
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    transition: left 0.3s ease;
+                    z-index: 999;
+                }
+                
+                .top-nav.active {
+                    left: 0;
+                }
+                
+                .nav-item {
+                    font-size: 1.25rem;
+                    margin: 1rem 0;
+                }
+            `;
+        document.head.appendChild(style);
+      }
+
+      // Performance optimization: Lazy load images
+      if ("IntersectionObserver" in window) {
+        const lazyImageObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const lazyImage = entry.target;
+                lazyImage.src = lazyImage.dataset.src;
+                lazyImage.classList.remove("lazy");
+                lazyImageObserver.unobserve(lazyImage);
+              }
+            });
+          }
+        );
+
+        document.querySelectorAll("img[data-src]").forEach((lazyImage) => {
+          lazyImageObserver.observe(lazyImage);
+        });
+      }
+
+      // Add subtle parallax effect to hero section
+      window.addEventListener("scroll", () => {
+        const scrolled = window.pageYOffset;
+        const hero = document.querySelector(".hero");
+        if (hero) {
+          hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        }
+      });
+    </script>
+  </body>
+</html>
